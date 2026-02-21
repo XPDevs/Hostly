@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hosted Content</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.9/purify.min.js"></script>
+</head>
+<body>
+    <script>
+        // This script retrieves the 'web' parameter from the URL
+        // and writes its content directly to the document.
+        //
+        // For example, if you navigate to:
+        // host.html?web=%3Ch1%3EHello%20World%3C/h1%3E
+        // It will display "Hello World" as a level 1 heading.
+        //
+        // This version uses DOMPurify to sanitize the input, preventing
+        // XSS attacks by removing malicious scripts while keeping HTML.
+
+        const params = new URLSearchParams(window.location.search);
+        const webContent = params.get('web');
+
+        if (webContent) {
+            const cleanContent = DOMPurify.sanitize(webContent);
+            document.write(cleanContent);
+        }
+    </script>
+</body>
+</html>
