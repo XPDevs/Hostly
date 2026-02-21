@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found · Hostly</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #ffffff;
+            color: #1a1d21;
+        }
+
+        .container {
+            max-width: 580px;
+            margin: 0 auto;
+            padding: 140px 24px;
+            text-align: center;
+        }
+
+        .error-code {
+            font-size: 64px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            color: #0f172a;
+        }
+
+        .message-stack {
+            font-size: 16px;
+            line-height: 2;
+            color: #475569;
+            margin-bottom: 48px;
+        }
+
+        .message-stack p {
+            margin-bottom: 4px;
+        }
+
+        .action-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background-color: #0f172a;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #1e293b;
+            transform: translateY(-1px);
+        }
+
+        .secondary-links {
+            margin-top: 80px;
+            padding-top: 32px;
+            border-top: 1px solid #f1f5f9;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .secondary-links a:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1 class="error-code">404</h1>
+        
+        <div class="message-stack">
+            <p>The resource you are looking for isn't here.</p>
+            <p>This usually happens if a link is broken.</p>
+            <p>The content may have been moved elsewhere within Hostly.</p>
+        </div>
+
+        <div class="action-group">
+            <a href="/" class="btn-primary">Return to Dashboard</a>
+            <button onclick="window.history.back()" class="text-sm font-medium text-slate-400 hover:text-slate-800 transition-colors">
+                Go back to previous page
+            </button>
+        </div>
+
+        <nav class="secondary-links">
+            <a href="/status">Network Status</a>
+            <a href="/docs">Support Docs</a>
+            <a href="/contact">Get Help</a>
+        </nav>
+
+        <div class="mt-8 text-[11px] text-slate-300 font-medium tracking-tight flex justify-center gap-4">
+            <p>&copy; 2026 Hostly</p>
+            <p>&copy; 2026 XPDevs</p>
+        </div>
+    </div>
+
+</body>
+</html>
